@@ -1,0 +1,225 @@
+```yaml
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                         #
+#   Vous pouvez traduire les messages de One in the       #
+#   Chamber ici.                                          #
+#   Les codes couleurs (&) sont pris en charge.           #
+#                                                         #
+#   Utilisez \n pour créer une nouvelle ligne.            #
+#   Certains messages sont automatiquement coupés        #
+#   toutes les 40 caractères.                             #
+#                                                         #
+#   Certains messages possèdent leurs propres            #
+#   variables comme %player%.                             #
+#                                                         #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+Commands:
+  Did-You-Mean: "&3Vouliez-vous dire &b%command%&3 ?"
+  Correct-Usage: "&cUtilisation correcte : %usage%"
+  Removed-Game-Instance: "&aInstance de jeu supprimée avec succès !"
+  No-Arena-Like-That: "&cAucune arène correspondant à ce nom n'a été trouvée !"
+  Type-Arena-Name: "&cVeuillez saisir un nom d'arène !"
+  No-Free-Arenas: "&cAucune arène disponible !"
+  Statistics:
+    Type-Name: "&cVeuillez saisir le nom d'une statistique à consulter !"
+    Invalid-Name: "&cNom de statistique invalide ! Types : kills, deaths, games_played, wins, loses, highest_score"
+    Header: "&8&m-------------------[&6 Top 10 &8&m]-------------------"
+    Format: "&e#%position% %name% - %value% &7%statistic%"
+  Only-By-Player: "&cVous devez être un joueur pour exécuter cette commande !"
+  Not-Playing: "&cVous devez être en jeu pour exécuter cette commande !"
+  No-Permission: "&cVous n'avez pas la permission d'utiliser cette commande !"
+  Leaderboard-Command:
+    Empty-Entry: "Vide"
+    Unknown-Entry: "Joueur inconnu"
+  Admin-Commands:
+    Teleported-To-Player: "&aTéléportation vers le joueur effectuée !"
+    Player-Not-Found: "&cJoueur introuvable !"
+    Success-Reload: "&aLe système, les configurations et les arènes ont été rechargés avec succès !"
+    List-Command:
+      Format: "&aArènes existantes : &7%list%"
+      No-Arenas-Created: "&cAucune instance de jeu à afficher ! Pourquoi ne pas en créer une ?"
+  Stats-Command:
+    Header: "&l-----[VOS STATISTIQUES]-----"
+    Header-Other: "&l-----[STATISTIQUES DE %player%]-----"
+    Messages:
+      - "%header%"
+      - "&8 * &aÉliminations : &e%kills%"
+      - "&8 * &aMorts : &e%deaths%"
+      - "&8 * &aVictoires : &e%wins%"
+      - "&8 * &aDéfaites : &e%loses%"
+      - "&8 * &aMeilleur score : &e%highest_score%"
+      - "&8 * &aParties jouées : &e%games_played%"
+      - "&l----------------------"
+
+# Messages du scoreboard en jeu.
+# Ne dépassez pas 48 caractères sur les anciennes versions de Minecraft !
+# Jusqu'à 144 caractères sont autorisés à partir de la version 1.14.
+
+Scoreboard:
+  Title: "&e&lOITC"
+  Top-Player-Format: "&f%score% &6%player%"
+  Content:
+    Waiting:
+      - ""
+      - "&fCarte : &a%map_name%"
+      - "&fJoueurs : &a%players%/%max_players%"
+      - ""
+      - "&fEn attente de joueurs..."
+      - ""
+      - "&epatreon.com/despical"
+    Starting:
+      - ""
+      - "&fCarte : &a%map_name%"
+      - "&fJoueurs : &a%players%/%max_players%"
+      - ""
+      - "&fDébut dans &a%formatted_time% &f!"
+      - "&fTemps restant pour"
+      - "&faccueillir d'autres joueurs"
+      - ""
+      - "&epatreon.com/despical"
+    Playing:
+      - ""
+      - "%top_player_1%"
+      - "%top_player_2%"
+      - "%top_player_3%"
+      - ""
+      - "&fCarte : &e%map_name%"
+      - "&fJoueurs : &6%players%"
+      - "&fScore : &6%kills%"
+      - ""
+      - "&fTemps restant : &6%formatted_time%"
+      - ""
+      - "&epatreon.com/despical"
+
+# Laissez un message vide pour masquer la barre dans un état spécifique de l'arène.
+
+Game-Bar:
+  Waiting-For-Players: "&e&lVOUS JOUEZ À &f&lONE IN THE CHAMBER &e&lPAR &b&lDespical"
+  Starting: "&e&lVOUS JOUEZ À &f&lONE IN THE CHAMBER &e&lPAR &b&lDespical"
+  In-Game: ""
+  Ending: "&e&lVOUS JOUEZ À &f&lONE IN THE CHAMBER &e&lPAR &b&lDespical"
+
+# Utilisé dans la plupart des messages du jeu.
+
+In-Game:
+  Plugin-Prefix: "&8[&6OITC&8] "
+  Already-Playing: "&cVous êtes déjà dans la file d'attente d'une partie ! Utilisez /oitc leave pour la quitter."
+  Join-No-Permission: "&cVous ne possédez pas la permission &6%permission% &cpour rejoindre cette arène !"
+  Full-Game-No-Permission: "&cVous n'avez pas la permission de rejoindre les parties complètes !"
+  No-Slots-For-Premium: "&cCette partie est déjà complète avec des joueurs premium ! Désolé."
+  You-Are-Spectator: "&cVous êtes maintenant spectateur ! Vous pouvez voler !"
+  Spectating-Disabled-On-Bungee: "&cLe mode spectateur est maintenant autorisé sur ce serveur !"
+  Only-Command-Ingame-Is-Leave: "&cVous devez quitter la partie avant d'exécuter des commandes. La seule commande autorisée est /oitc leave !"
+  Join-Cancelled-Via-API: "&cVous ne pouvez pas rejoindre cette partie !"
+  Arena-Not-Configured: "&cCette arène n'est pas encore configurée ! Contactez un membre du staff !"
+  Game-Chat-Format: "&7%player% : &f%message%"
+  Game-Death-Format: "&7[&4CHAT DES MORTS&7] &r"
+  Game-Items:
+    Leave-Item:
+      Returning-Lobby: "&a&lTéléportation vers le lobby dans 3 secondes...\n&a&lFaites un clic droit à nouveau pour annuler la téléportation !"
+      Teleport-Cancelled: "&c&lTéléportation annulée !"
+  Spectator:
+    Spectator-Menu-Name: "&8Téléporteur"
+    Target-Player-Score: "&7Score : %score%"
+    Settings-Menu:
+      Item-Name: "&b&lParamètres du spectateur &7(Clic droit)"
+      Inventory-Name: "&8Paramètres du spectateur"
+      Speed-Name: "&aVitesse"
+      No-Speed: "&aAucune vitesse"
+      Enable-Night-Vision: "&aActiver la vision nocturne"
+      Enable-Night-Vision-Lore:
+        - "&7Cliquez pour activer la vision nocturne !"
+      Disable-Night-Vision: "&cDésactiver la vision nocturne"
+      Disable-Night-Vision-Lore:
+        - "&7Cliquez pour désactiver la vision nocturne !"
+      Hide-Spectators: "&cMasquer les spectateurs"
+      Hide-Spectators-Message: "&cVous ne voyez désormais plus les autres spectateurs !"
+      Hide-Spectators-Lore:
+        - "&7Cliquez pour masquer les autres spectateurs !"
+      Show-Spectators: "&aAfficher les spectateurs"
+      Show-Spectators-Message: "&aVous pouvez désormais voir les autres spectateurs !"
+      Show-Spectators-Lore:
+        - "&7Cliquez pour afficher les autres spectateurs !"
+  Messages:
+    Lobby-Messages:
+      Start-In: "&7La partie commence dans &b%number%&7 secondes !"
+      Waiting-For-Players: "&cEn attente de joueurs... Il faut au moins %minplayers% joueurs pour commencer."
+      Enough-Players-To-Start: "&7Nous avons suffisamment de joueurs. La partie va bientôt commencer !"
+      Game-Started: "&7La partie a commencé ! Le premier joueur à atteindre 25 éliminations remporte la victoire !"
+      Kicked-For-Premium-Slot: "&c%player% a été expulsé de la partie pour libérer une place à un joueur premium !"
+      You-Were-Kicked-For-Premium-Slot: "&cVous avez été expulsé de la partie pour libérer une place à un joueur premium !"
+    Join: "&b%player% &ea rejoint la partie &e(&b%players%&e/&b%maxplayers%&e) !"
+    Leave: "&b%player% &ea quitté la partie &e(&b%players%&e/&b%maxplayers%&e)&7 !"
+    Death: "&9%player% &ea été éliminé par &9%killer% !"
+    Unknown-Death: "&9%player% &ea été tué par &ksomeoneunknown&7 !"
+    Already-Force-Start: "&cLa partie est déjà en train de démarrer !"
+    Kill-Streak:
+      - "&9%killer% &een est à &b%kill_streak% &eéliminations consécutives !"
+      - "&9%killer% &eest imbattable !"
+      - "2:&9%killer% &ea éliminé 2 joueurs à la suite !"
+      - "5:&9%killer% &ea réalisé 5 éliminations consécutives !"
+      - "10:&9%killer% &ea atteint 10 éliminations consécutives !"
+    Seconds-Left-Title: "&c%time% &esecondes restantes !"
+    Seconds-Left-Subtitle: "&eLa partie se terminera dans %time%s"
+    Score-Subtitle: "&a&l+&6&l1"
+    Death-Subtitle: "&c&lVous êtes mort !"
+    Game-End-Messages:
+      Titles:
+        Win: "&fVainqueur"
+        Lose: ""
+      Subtitles:
+        Win: "&e%winner%"
+        Lose: "&c%winner% &aa remporté la partie !"
+      Summary-Message:
+        - "&a&m-------------------------------------------------"
+        - "&f&lOne in the Chamber"
+        - ""
+        - "&f&l%winner% &e&lVICTOIRE ! (%winner_score%)"
+        - ""
+        - "&n&lVos statistiques :"
+        - ""
+        - "&7Classement : %rank%"
+        - "&7Score : %score%"
+        - "&7Morts : %deaths%"
+        - ""
+        - "&a&m-------------------------------------------------"
+    Admin-Messages:
+      Set-Starting-In-To-0: "&bUn administrateur a réglé le temps d'attente sur 0. La partie commence maintenant !"
+      Stopped-Game: "&bUn administrateur a arrêté de force la partie avec une commande !"
+
+Signs:
+  Please-Type-Arena-Name: "&cVeuillez saisir le nom de l'arène sur la deuxième ligne !"
+  Arena-Doesnt-Exists: "&cL'arène portant ce nom n'existe pas !"
+  Doesnt-Have-Permission: "&cVous n'avez pas la permission de casser ce panneau !"
+  Sign-Created: "&aLe panneau de l'arène a été créé avec succès !"
+  Sign-Removed: "&aLe panneau a été supprimé avec succès !"
+  Look-Sign: "&cVous ne regardez aucun panneau !"
+  Already-A-Sign: "&cCe panneau est déjà un panneau de jeu !"
+  Game-States:
+    Waiting: "&lEn attente..."
+    Starting: "&e&lDémarrage"
+    Playing: "&lEn jeu"
+    Full-Game: "&c&lCOMPLET"
+    Ending: "&lFin de partie"
+    Restarting: "&c&lRedémarrage"
+    Inactive: "&lInactif..."
+  Lines:
+    - "&4&lOITC"
+    - "%state%"
+    - "%map_name%"
+    - "&5[%players%/%max_players%]"
+
+Formatted-Arena-States:
+  Waiting: "En attente"
+  Starting: "Démarrage"
+  Playing: "En jeu"
+  Ending: "Fin de partie"
+  Restarting: "Redémarrage"
+  Inactive: "Inactif"
+
+# Si vous modifiez cette valeur, le fichier sera remplacé par le YAML par défaut.
+# Il est donc préférable de ne pas modifier cette ligne.
+
+Language: default
+```
