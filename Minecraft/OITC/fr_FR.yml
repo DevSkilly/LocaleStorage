@@ -6,10 +6,10 @@
 #   Les codes couleurs (&) sont pris en charge.           #
 #                                                         #
 #   Utilisez \n pour créer une nouvelle ligne.            #
-#   Certains messages sont automatiquement coupés        #
+#   Certains messages sont automatiquement coupés         #
 #   toutes les 40 caractères.                             #
 #                                                         #
-#   Certains messages possèdent leurs propres            #
+#   Certains messages possèdent leurs propres             #
 #   variables comme %player%.                             #
 #                                                         #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
