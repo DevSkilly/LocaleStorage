@@ -220,4 +220,4 @@ Formatted-Arena-States:
 # Si vous modifiez cette valeur, le fichier sera remplacé par le YAML par défaut.
 # Il est donc préférable de ne pas modifier cette ligne.
 
-Language: default
+Language: fr
